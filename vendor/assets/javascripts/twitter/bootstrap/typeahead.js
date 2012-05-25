@@ -260,7 +260,7 @@
   , click: function (e) {
       e.stopPropagation()
       e.preventDefault()
-      this.select()
+      $.proxy(this.select(), e.target)
     }
 
   , mouseenter: function (e) {
